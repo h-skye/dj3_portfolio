@@ -1,5 +1,8 @@
 <h1>Yan's Portfolio</h1>
 
+{% load static %}
+<a href="{% static 'portfolio/resume.pdf' %}">Resume</a>
+<img src="{% static 'portfolio/corgipic.jpg' %}">
 
 {% for project in projects %}
 
@@ -8,6 +11,7 @@
 <img src="{{ project.image.url }}" width="600" height="400">
 {% if project.url %}
 <br><a href-"{{ project.url }}">Link</a>
+
 {% endif %}
 
 {% endfor %}

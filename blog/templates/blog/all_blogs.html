@@ -1,6 +1,8 @@
-<h1>Hello blog</h1>
+<h1>My blog</h1>
 
 {% for blog in blogs %}
-{{ blog.title }}
+<a href="{% url 'detail' blog.id %}"><h3>{{ blog.title }}</h3></a>
+<h4>{{ blog.date}} </h4>
+<p>{{ blog.description }}</p>
 
 {% endfor %}
