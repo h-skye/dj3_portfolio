@@ -5,6 +5,9 @@
 
 <h1>{{ project.title }}</h1>
 <p>{{ project.description }}</p>
-{{ project.image }}
+<img src="{{ project.image.url }}" width="600" height="400">
+{% if project.url %}
+<br><a href-"{{ project.url }}">Link</a>
+{% endif %}
 
-{% endfor % }
+{% endfor %}
