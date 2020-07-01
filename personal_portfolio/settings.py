@@ -126,4 +126,9 @@ MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-STATICFILES_DIRS = ("portfolio/static",)
+# STATICFILES_DIRS = ("portfolio/static",)
+
+try:
+    from .local_settings import *
+except ImportError:
+    print("No local file running. You must be running")
