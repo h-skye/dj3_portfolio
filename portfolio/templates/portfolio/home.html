@@ -1,8 +1,14 @@
+{% extends 'portfolio/base.html' %}
+<!-- matches the base block name -->
+{% block content %} 
+
 <h1>Yan's Portfolio</h1>
 
 {% load static %}
-<a href="{% static 'portfolio/resume.pdf' %}">Resume</a>
-<img src="{% static 'portfolio/corgipic.jpg' %}">
+<a href="/blog">Blog</a>
+<br>
+<!-- <a href="{% static 'portfolio/resume.pdf' %}">Resume</a> -->
+<img src="{% static 'portfolio/profile_pic.jpg' %}" width="600" height="400">
 
 {% for project in projects %}
 
@@ -15,3 +21,4 @@
 {% endif %}
 
 {% endfor %}
+{% endblock %}
